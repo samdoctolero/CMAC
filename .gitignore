@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Cmac/Debug
+/Cmac/x64
+/CmacUnitTests/x64
+/Debug
+/ipch/CMACUNITTESTS-3deb41ee
+/x64
+/Cmac.VC.VC.opendb
+/Cmac.VC.db
+/.vs/Cmac/v14
