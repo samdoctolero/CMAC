@@ -12,4 +12,3 @@ Currently, two implementations of a CMAC types are created:
 - Cmac : very basic CMAC implementation
 - SupervisoryCmac : inherits Cmac with supervisory bias values as an addition
 
-
