@@ -40,6 +40,23 @@ extern "C"
 		, double supervisoryValues[], double supervisoryNu);
 
 	// ====================================
+	// Create Weight Smoothing CMAC
+	// ====================================
+	// This constructor takes in an array of beta (learning rate) values
+	void * CreateWeightSmoothingCmacA(unsigned int numInputs, unsigned int numOutputs
+		, unsigned int numQ, unsigned int numLayers
+		, double maxlimit[], double minlimit[]
+		, double beta[], double nu
+		, double supervisoryValues[], double supervisoryNu);
+
+	// This constructor takes in a scalar (learning rate) value
+	void * CreateWeightSmoothingCmacB(unsigned int numInputs, unsigned int numOutputs
+		, unsigned int numQ, unsigned int numLayers
+		, double maxlimit[], double minlimit[]
+		, double beta, double nu
+		, double supervisoryValues[], double supervisoryNu);
+
+	// ====================================
 	// Destroy methods for all cmacs
 	// ====================================
 	// A singular destroy methods to delete a CMAC

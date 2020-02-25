@@ -1,6 +1,7 @@
 #include "CCmac.h"
 #include "Cmac.h"
 #include "SupervisoryCmac.h"
+#include "WeightSmoothingCmac.h"
 #include <typeinfo>
 
 
@@ -118,6 +119,53 @@ void * CreateSupervisoryCmacB(unsigned int numInputs, unsigned int numOutputs
 	// create instance
 	ICmac* result = new SupervisoryCmac(numOutputs, numQ, numLayers
 		, max, min, beta, nu, supVal, supervisoryNu);
+
+	return result;
+}
+
+// ============================================
+// Create Weight Smoothing CMAC
+// ============================================
+
+void * CreateWeightSmoothingCmacA(unsigned int numInputs, unsigned int numOutputs, unsigned int numQ, unsigned int numLayers, double maxlimit[], double minlimit[], double beta[], double nu, double supervisoryValues[], double supervisoryNu)
+{
+	// create vectors
+	vecd max(numInputs, 0.0);
+	vecd min(numInputs, 0.0);
+	for (uint i = 0; i < numInputs; i++)
+	{
+		max[i] = maxlimit[i];
+		min[i] = minlimit[i];
+	}
+
+	// create vectors associated with numOutputs
+	vecd be(numOutputs, 0.0);
+	for (uint i = 0; i < numOutputs; i++)
+	{
+		be[i] = beta[i];
+	}
+
+	// create instance
+	ICmac* result = new WeightSmoothingCmac(numOutputs, numQ, numLayers
+		, max, min, be, nu);
+
+	return result;
+}
+
+void * CreateWeightSmoothingCmacB(unsigned int numInputs, unsigned int numOutputs, unsigned int numQ, unsigned int numLayers, double maxlimit[], double minlimit[], double beta, double nu, double supervisoryValues[], double supervisoryNu)
+{
+	// create vectors
+	vecd max(numInputs, 0.0);
+	vecd min(numInputs, 0.0);
+	for (uint i = 0; i < numInputs; i++)
+	{
+		max[i] = maxlimit[i];
+		min[i] = minlimit[i];
+	}
+
+	// create instance
+	ICmac* result = new WeightSmoothingCmac(numOutputs, numQ, numLayers
+		, max, min, beta, nu);
 
 	return result;
 }
