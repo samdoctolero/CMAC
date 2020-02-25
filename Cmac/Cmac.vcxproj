@@ -112,14 +112,17 @@
   <ItemGroup>
     <ClInclude Include="CCmac.h" />
     <ClInclude Include="Cmac.h" />
+    <ClInclude Include="CmacImpl.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="ICmac.h" />
     <ClInclude Include="SupervisoryCmac.h" />
+    <ClInclude Include="WeightSmoothingCmac.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CCmac.cpp" />
     <ClCompile Include="Cmac.cpp" />
     <ClCompile Include="SupervisoryCmac.cpp" />
+    <ClCompile Include="WeightSmoothingCmac.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

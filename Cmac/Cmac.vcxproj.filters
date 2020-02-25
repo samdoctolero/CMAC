@@ -30,6 +30,12 @@
     <ClInclude Include="CCmac.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="WeightSmoothingCmac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CmacImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cmac.cpp">
@@ -39,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CCmac.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WeightSmoothingCmac.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

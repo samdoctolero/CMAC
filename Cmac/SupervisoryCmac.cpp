@@ -1,10 +1,11 @@
+
 #include "SupervisoryCmac.h"
-#include "Cmac.cpp"
+#include "CmacImpl.h"
 
 // ====================================================================
 // SupervisoryCmacImpl
 // ====================================================================
-class SupervisoryCmac::SupervisoryCmacImpl
+class SupervisoryCmac::SupervisoryCmacImpl 
 	: public Cmac::CmacImpl
 {
 private:
